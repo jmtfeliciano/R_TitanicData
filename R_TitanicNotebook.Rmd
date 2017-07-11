@@ -9,23 +9,35 @@ output:
 
 # Tutorial Notes:  
 
-The Beauty of R Studio is the ability to have notebooks for data analysis.  It allows us to run r-code inline.  Think of it as a fancy chemistry notebook for data analysis.  For this notebook, I will use the titanic data for analysis.  This assumes that you have R and RStudio loaded.  
-
-We probably want to load the titanic data
-{r} synthax above indicates that this block can run inline r-code
-
-To see if the inline works, let's add to numbers and see which output is generated after we click on the upper-right play button:
-```{r}
+The Beauty of R Studio is the ability to have notebooks for data analysis.  It allows us to run r-code inline.  Think of it as a fancy chemistry notebook where you can run the the experiments in the notebook itself -- but for data analysis!  For this notebook, I will use the titanic data for analysis.  This assumes that you have R and RStudio loaded.  
 
 
-2+2
+
+__Note__ :  mosaic package is required for this if you want to run data yourself and not to simply view them.   If you do not have this, run this code in your r-console independently:
+
+```
+install.packages("ggplot2")
 ```
 
+
+Getting started:  We probably want to load the titanic data first. We probably want to load the mosaic library out of the way.  So we can accomplish both with the following script:
 
 ```{r, message=FALSE, warning=FALSE}
 load("Titanic.Rdata")
 library("mosaic")
 ```
+
+Now that the data has been loaded, we probably want to see which data variables we will deal with!  
+
+
+
+
+
+
+
+
+
+
 
 ```{r}
 summary(Titanic)
