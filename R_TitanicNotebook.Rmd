@@ -4,7 +4,6 @@ author: "Josemari Feliciano"
 date: "7/10/2017"
 output:
   pdf_document: default
-  html_document: default
 ---
 
 
@@ -12,16 +11,27 @@ output:
 
 The Beauty of R Studio is the ability to have notebooks for data analysis.  It allows us to run r-code inline.  Think of it as a fancy chemistry notebook for data analysis.  For this notebook, I will use the titanic data for analysis.  This assumes that you have R and RStudio loaded.  
 
+We probably want to load the titanic data
+{r} synthax above indicates that this block can run inline r-code
 
+To see if the inline works, let's add to numbers and see which output is generated after we click on the upper-right play button:
 ```{r}
-# We probably want to load the titanic data
-# {r} synthax above indicates that this block can run inline r-code
-
-#To see if the inline works, let's add to numbers and see which output is generated after we click on the upper-right play button:
 
 
 2+2
 ```
 
 
+```{r, message=FALSE, warning=FALSE}
+load("Titanic.Rdata")
+library("mosaic")
+```
+
+```{r}
+summary(Titanic)
+```
+
+```{r}
+bargraph( ~ Class, data =Titanic)
+```
 
