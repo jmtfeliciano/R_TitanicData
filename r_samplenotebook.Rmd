@@ -1,12 +1,7 @@
 ---
-title: "Tutorials Of R Using Titanic Data"
-author: "Josemari Feliciano"
-date: "7/10/2017"
-output:
-  pdf_document: default
-  html_document: default
+title: "R Notebook"
+output: html_notebook
 ---
-
 
 # Tutorial Notes:  
 
@@ -22,6 +17,4 @@ The Beauty of R Studio is the ability to have notebooks for data analysis.  It a
 
 2+2
 ```
-
-
 
