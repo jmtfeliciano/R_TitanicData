@@ -18,3 +18,16 @@ The Beauty of R Studio is the ability to have notebooks for data analysis.  It a
 2+2
 ```
 
+```{r, warning=FALSE}
+load("Titanic.Rdata")
+library("mosaic")
+```
+
+```{r}
+summary(Titanic)
+```
+
+```{r}
+bargraph( ~ Class, data =Titanic)
+```
+
