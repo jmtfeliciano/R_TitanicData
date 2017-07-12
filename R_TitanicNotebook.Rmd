@@ -38,7 +38,7 @@ Now that the data has been loaded, we probably want to see which data variables 
 names(Titanic)
 ```
 
-The output above clearly shows we have:$\\ \\ $  
+The `names()` function above produced an output:  it shows the 6 variables we are dealing with from the titanic data.     
   
 ```{r}
 summary(Titanic)
