@@ -9,7 +9,9 @@ output:
 
 # Tutorial Notes:  
 
-The Beauty of R Studio is the ability to have notebooks for data analysis.  It allows us to run r-code inline.  Think of it as a fancy chemistry notebook where you can run the the experiments in the notebook itself -- but for data analysis!  For this notebook, I will use the titanic data for analysis.  This assumes that you have R and RStudio loaded.  
+The Beauty of R Studio is the ability to have notebooks for data analysis.  It allows us to run R-code inline similar to IPython Notebooks.  
+
+Think of it as a fancy chemistry notebook where you can somehow run the experiments itself in the notebook -- but for data analysis!  For this notebook and R tutorial, I will use the titanic data for analysis.  This assumes that you have R and RStudio loaded.  
 
 
 __Note__ :  mosaic package is required for this if you want to run data yourself and not to simply view them.   If you do not have this, run this code in your r-console independently:
@@ -38,10 +40,22 @@ Now that the data has been loaded, we probably want to see which data variables 
 names(Titanic)
 ```
 
-The `names()` function above produced an output:  it shows the 6 variables we are dealing with from the titanic data.     
+The `names()` function we just ran displayed the 6 variables within the Titanic Data which include Gender, Age, Name, Fare, Class and Survived.   
+  
+Of course, you could have looked at the actual CSV file or RData file directly. But functions like `names()` are very useful when wrangling data such as JSON and similar data types.  
+  
+
+
+```{r}
+typeof(Titanic)
+```
+
+
+
+
   
 ```{r}
-summary(Titanic)
+sapply(Titanic,class)
 ```
 
 ```{r}
