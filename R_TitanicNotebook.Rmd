@@ -14,7 +14,7 @@ The Beauty of R Studio is the ability to have notebooks for data analysis.  It a
 Think of it as a fancy chemistry notebook where you can somehow run the experiments itself in the notebook -- but for data analysis!  For this notebook and R tutorial, I will use the titanic data for analysis.  This assumes that you have R and RStudio loaded.  
 
 
-__Note__ :  mosaic package is required for this if you want to run data yourself and not to simply view them.   If you do not have this, run this code in your r-console independently:
+__Note__ :  mosaic package is required for this if you want to run data yourself and not to simply view them.   If you do not have this, run this code in your r-console independently:  
 
 ```
 install.packages("ggplot2")
@@ -26,14 +26,17 @@ install.packages("ggplot2")
   
 ## Getting started:  
 
-We probably want to load the titanic data first. We probably want to load the mosaic library out of the way.  So we can accomplish both with the following script:
+We probably want to load the titanic data first. We probably want to load the mosaic library out of the way.  
+
+### Loading Data:
+We can accomplish both data loading and library call with the following script:
 
 ```{r, message=FALSE, warning=FALSE}
 load("Titanic.Rdata")
 library("mosaic")
 ```
   
-
+### Which Variables Are In Data?  
 Now that the data has been loaded, we probably want to see which data variables we will deal with!  Below, we will use `names()` to print the variable names in our data to have them handy.  
 
 ```{r}
@@ -44,13 +47,7 @@ The `names()` function we just ran displayed the 6 variables within the Titanic 
   
 Of course, you could have looked at the actual CSV file or RData file directly. But functions like `names()` are very useful when wrangling data such as JSON and similar data types.  
   
-
-
-```{r}
-typeof(Titanic)
-```
-
-
+### Exploring Data Types:
 
 
   
