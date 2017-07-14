@@ -1,5 +1,5 @@
 ---
-title: "Tutorials Of R Using Titanic Data"
+title: "R-Tutorials Using Titanic Data"
 author: "Josemari Feliciano"
 date: "7/10/2017"
 output:
@@ -49,11 +49,25 @@ Of course, you could have looked at the actual CSV file or RData file directly. 
   
 ### Exploring Data Types:
 
-
+The `sapply()` function is very useful for this.  The data types do make sense. 
   
 ```{r}
 sapply(Titanic,class)
 ```
+
+The output above does make sense; data types seem to match what we would expect.  Age is numeric.  And Gender is a 'factor', commonly known as string in other computer langauges. 
+
+Another function we could have used is `str()`, but the output can be messy and dense. `str()` does provide more information on the variables in our data.  
+
+```{r}
+str(Titanic)
+```
+
+As we can see, more information are provided. For instance, the output shows that there are 2 levels for Gender, "Famale" and "Male".  But `str()` can look a bit messy.  
+
+
+
+
 
 ```{r}
 bargraph( ~ Class, data =Titanic)
