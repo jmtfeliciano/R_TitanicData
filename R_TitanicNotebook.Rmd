@@ -6,8 +6,14 @@ output:
   pdf_document: default
 ---
 
+# There are three major parts to this tutorials:
 
-# Tutorial Notes:  
+1.  How to read and extract data from RData file
+2.  How to create basic graphs 
+3.  How to run basic descriptive statistics
+4.  How to run and read results of inferential statistics
+
+### Tutorial Notes:  
 
 The Beauty of R Studio is the ability to have notebooks for data analysis.  It allows us to run R-code inline similar to IPython Notebooks.  
 
@@ -24,7 +30,7 @@ install.packages("ggplot2")
 
   
   
-## Getting started:  
+## Part 1:  Reading data  
 
 We probably want to load the titanic data first. We probably want to load the mosaic library out of the way.  
 
@@ -67,7 +73,7 @@ As we can see, more information are provided. For instance, the output shows tha
 
 ## Creating Basic Graphs
 
-There are so many ways to create graphs and the resources and synthax for R can be overwhelming.  So I will demonstrate a few ways to depict our data.
+There are so many ways to create graphs and the resources and synthax for R can be overwhelming.  So I will demonstrate a few ways to depict our data in a meaningful way.
 
-
+Comparing 
 
