@@ -42,6 +42,9 @@ load("Titanic.Rdata")
 library("mosaic")
 ```
   
+_Note:_  Always rerun/replay the code above when entering this data. The pre-ran scripts will remain intact but rerunning them might display errors.  So reran this.  Or if you see an error, know that this code might be the culprit.  
+  
+  
 ### Which Variables Are In Data?  
 Now that the data has been loaded, we probably want to see which data variables we will deal with!  Below, we will use `names()` to print the variable names in our data to have them handy.  
 
@@ -73,9 +76,18 @@ As we can see, more information are provided. For instance, the output shows tha
 
 _Note:_ We could have used `View(Titanic)` to open the spreadsheet in a difference pane or tab in RStudio.  But that will require sifting through the spreadsheet.  It's good to familiarize with both `str()` and `sapply()` functions so we don't have leave our tab.  
 
-## Creating Basic Graphs
+## Basic Data Tallying
 
-There are so many ways to create graphs and the resources and synthax for R can be overwhelming.  So I will demonstrate a few ways to depict our data in a meaningful way.
+There are multiple ways of tallying variables.  
+
+### Using count format of `tally()`:  
+
+```{r}
+tally(~Gender, format = "count", data = Titanic)
+```
+
+
+
 
 ### Comparing Genders:
 
