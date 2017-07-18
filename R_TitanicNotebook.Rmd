@@ -86,9 +86,15 @@ There are multiple ways of tallying variables.
 tally(~Gender, format = "count", data = Titanic)
 ```
 
+As you can see from above output, the count format will give us the raw number of count.  For instance, 388 passengers from the Titanic are female.  
+
 ### Using proportion format of `tally()`:  
 
+```{r}
+tally(~Class, format = "proportion", data = Titanic)
+```
 
+Another format that statisticians use is the proportion format of `tally()`.  For instance, the Lower class output implies that roughly 47.85% of Titanic passengers bought the low-class tickets.    
 
 
 ### Comparing Genders:
