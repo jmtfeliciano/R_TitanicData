@@ -6,7 +6,7 @@ output:
   pdf_document: default
 ---
 
-# There are three major parts to this tutorials:
+# There are four major parts to this tutorials:
 
 1.  How to read and extract data from RData file
 2.  How to create basic graphs 
@@ -27,7 +27,7 @@ install.packages("ggplot2")
 ``` 
 
 
-
+$\pagebreak$ 
   
   
 ## Part 1:  Reading data  
@@ -85,6 +85,8 @@ There are multiple ways of tallying variables.
 ```{r}
 tally(~Gender, format = "count", data = Titanic)
 ```
+
+### Using proportion format of `tally()`:  
 
 
 
