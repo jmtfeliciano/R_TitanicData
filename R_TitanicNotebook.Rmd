@@ -94,7 +94,7 @@ $\pagebreak$
 ## Part 2:  Creating Quick Tally and Basic Graphs
 
 
-## Basic Data Tallying
+## Basic Data Tallying and Graph Creation
 
 There are multiple ways of tallying variables.  
 
@@ -127,10 +127,45 @@ tally(~Survived, format = "percent", data = Titanic)
 
 The output above clearly shows that roughly 59.14% of Titanic passengers did not survive the infamous tragedy.  
 
-Just a quick note:  had we ran the proportion format, the output would have displayed 0.5914 for No. As students and practitioner of Statistics, you need to be fluent in reading via proportions.
+_Just a quick note:_  Had we ran the proportion format, the output would have displayed 0.5914 for No. As students and practitioner of Statistics, you need to be fluent in reading via proportions.  
 
 
-### Comparing Genders:
+## Creating Graphs and Charts of One Categorical Data:
+
+### The function `bargraph()` 
+
+The easiest way to create graph in R is by using the `bargraph()` function:
+
+```{r}
+bargraph(~Class, Titanic)
+```
+
+It looks like we were able to graph a decent graph.  But the issue with this is:  `bargraph()` lacks flexibility.  So this might be good to create a simply bar graph.  But if you want to creatively label or redesign any aspect of the graph, `bargraph()` will not yield to you.  
+
+### The function `barplot()`  
+
+
+
+
+
+
+*** 
+
+To be edited:
+
+```{r}
+counts <- table(Titanic$Class)
+barplot(counts)
+```
+
+```{r}
+counts <-tally(~Gender, format = "count", data = Titanic)
+pie(counts, main="Gender Distribution of Titanic Passengers")
+```
+
+
+
+
 
 
 
