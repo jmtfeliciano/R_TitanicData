@@ -94,7 +94,19 @@ As you can see from above output, the count format will give us the raw number o
 tally(~Class, format = "proportion", data = Titanic)
 ```
 
-Another format that statisticians use is the proportion format of `tally()`.  For instance, the Lower class output implies that roughly 47.85% of Titanic passengers bought the low-class tickets.    
+Another format that statisticians use is the proportion format of `tally()`.  For instance, the Lower class output implies that roughly 47.85% of Titanic passengers bought the low-class tickets.  
+
+### Using percent format of `tally()`:  
+
+Most of Statistics will deal with proportion format like those displayed in the previous section.  So the percent format is really unnecessary. But if you will not use any other statistical test, this might be handy to use. 
+
+```{r}
+tally(~Survived, format = "percent", data = Titanic)
+```
+
+Just a quick note:  had we ran the proportion format, the output would have displayed 0.5914 for No.  
+
+The output above clearly shows that roughly 40.86% of Titanic passengers survived the infamous incident.  
 
 
 ### Comparing Genders:
