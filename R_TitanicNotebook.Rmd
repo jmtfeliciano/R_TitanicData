@@ -17,10 +17,10 @@ output:
 
 The Beauty of R Studio is the ability to have notebooks for data analysis.  It allows us to run R-code inline similar to IPython Notebooks.  
 
-Think of it as a fancy chemistry notebook where you can somehow run the experiments itself in the notebook -- but for data analysis!  For this notebook and R tutorial, I will use the titanic data for analysis.  This assumes that you have R and RStudio loaded.  
+Think of it as a fancy chemistry notebook where you can somehow run the experiments itself in the notebook -- but for data analysis!  For this notebook and R tutorial, I will use the titanic data for analysis.  This assumes that you have installed both R and RStudio.  
 
 
-__Note__ :  The mosaic package is required for this if you want to run the data yourself in your R environment and not to simply view them from my github repo.   If you do not have this installed, run this code in your r-console independently:  
+__Note__ :  The mosaic package is required if you want to run the data yourself in your local R environment -- and not to simply view them from my github repo.   If you do not have this installed, run this code in your r-console independently:  
   
 ```
 install.packages("ggplot2")
@@ -29,13 +29,15 @@ install.packages("ggplot2")
 
 $\pagebreak$ 
   
+  
+  
 # R-Tutorials Using Titanic Data  
 ## Part 1:  Reading data  
 
-We probably want to load the titanic data first. We probably want to load the mosaic library out of the way.  
+We probably want to load the Titanic data first. We probably want to load the mosaic library out of the way as well.  
 
 ### Loading Data:
-We can accomplish both data loading and library call with the following script:
+We can accomplish both data loading and library call with the following R-script:
 
 ```{r, message=FALSE, warning=FALSE}
 load("Titanic.Rdata")
@@ -45,8 +47,10 @@ library("mosaic")
 _Note:_  Always rerun/replay the code above when entering this file in your local environment. The pre-ran scripts will remain intact but rerunning them might display errors.  So you might have to rerun this code eventually.  If you see an error, know that this code might be the culprit.  
   
   
+  
 ### Which Variables Are In Data?  
-Now that the data has been loaded, we probably want to see which data variables we will deal with!  Below, we will use `names()` to print the variable names in our data to have them handy.  
+
+Now that the data has been loaded, we probably want to see which data variables we have to deal with!  Below, we will use `names()` to print the variables within our data.
   
 ```{r}
 names(Titanic)
@@ -54,17 +58,17 @@ names(Titanic)
   
 The `names()` function we just ran displayed the 6 variables within the Titanic Data which include Gender, Age, Name, Fare, Class and Survived.   
   
-Of course, you could have looked at the actual CSV file or RData file directly. But functions like `names()` are very useful when wrangling data such as JSON and similar data types.  
+Of course, you could have looked at the actual CSV file or RData file directly. But functions like `names()` are very useful when wrangling data from JSON and similar data types.  
   
 ### Exploring Data Types:
 
-The `sapply()` function is very useful for this.  The data types do make sense. 
+The `sapply()` function is very useful for this to see the variables and their data types.
   
 ```{r}
 sapply(Titanic,class)
 ```
 
-The output above does make sense; data types seem to match what we would expect.  Age is numeric.  And Gender is a 'factor', commonly known as string in other computer langauges. 
+The output above does make sense; data types seem to match what we would expect.  Age is numeric.  And Gender is a 'factor', most commonly known as a string in other programming languages. 
 
 Another function we could have used is `str()`, but the output can be messy and dense. `str()` does provide more information on the variables in our data.  
 
@@ -72,9 +76,23 @@ Another function we could have used is `str()`, but the output can be messy and 
 str(Titanic)
 ```
 
-As we can see, more information are provided. For instance, the output shows that there are 2 levels for Gender, "Famale" and "Male".  But `str()` can look a bit messy.  
+The output from `str()` did provide us more information about our variables. For instance, the output shows that there are 2 levels for Gender: "Famale" and "Male".  But `str()` can be messy to look at.
 
 _Note:_ We could have used `View(Titanic)` to open the spreadsheet in a difference pane or tab in RStudio.  But that will require sifting through the spreadsheet.  It's good to familiarize with both `str()` and `sapply()` functions so we don't have leave our tab.  
+
+
+
+
+
+
+
+$\pagebreak$ 
+  
+  
+  
+# R-Tutorials Using Titanic Data  
+## Part 2:  Creating Quick Tally and Basic Graphs
+
 
 ## Basic Data Tallying
 
@@ -107,9 +125,9 @@ Most of Statistics will deal with proportion format like those displayed in the 
 tally(~Survived, format = "percent", data = Titanic)
 ```
 
-Just a quick note:  had we ran the proportion format, the output would have displayed 0.5914 for No.  
-
 The output above clearly shows that roughly 59.14% of Titanic passengers did not survive the infamous tragedy.  
+
+Just a quick note:  had we ran the proportion format, the output would have displayed 0.5914 for No. As students and practitioner of Statistics, you need to be fluent in reading via proportions.
 
 
 ### Comparing Genders:
