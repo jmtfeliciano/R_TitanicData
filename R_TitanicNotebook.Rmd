@@ -9,7 +9,7 @@ output:
 # There are four major parts to this tutorials:
 
 1.  How to read and extract data from RData file
-2.  How to create basic graphs 
+2.  How to create basic tally and graphs 
 3.  How to run basic descriptive statistics
 4.  How to run and read results of inferential statistics
 
@@ -20,8 +20,8 @@ The Beauty of R Studio is the ability to have notebooks for data analysis.  It a
 Think of it as a fancy chemistry notebook where you can somehow run the experiments itself in the notebook -- but for data analysis!  For this notebook and R tutorial, I will use the titanic data for analysis.  This assumes that you have R and RStudio loaded.  
 
 
-__Note__ :  mosaic package is required for this if you want to run data yourself and not to simply view them.   If you do not have this, run this code in your r-console independently:  
-
+__Note__ :  The mosaic package is required for this if you want to run the data yourself in your R environment and not to simply view them from my github repo.   If you do not have this installed, run this code in your r-console independently:  
+  
 ```
 install.packages("ggplot2")
 ``` 
@@ -29,7 +29,7 @@ install.packages("ggplot2")
 
 $\pagebreak$ 
   
-  
+# R-Tutorials Using Titanic Data  
 ## Part 1:  Reading data  
 
 We probably want to load the titanic data first. We probably want to load the mosaic library out of the way.  
@@ -42,16 +42,16 @@ load("Titanic.Rdata")
 library("mosaic")
 ```
   
-_Note:_  Always rerun/replay the code above when entering this data. The pre-ran scripts will remain intact but rerunning them might display errors.  So reran this.  Or if you see an error, know that this code might be the culprit.  
+_Note:_  Always rerun/replay the code above when entering this file in your local environment. The pre-ran scripts will remain intact but rerunning them might display errors.  So you might have to rerun this code eventually.  If you see an error, know that this code might be the culprit.  
   
   
 ### Which Variables Are In Data?  
 Now that the data has been loaded, we probably want to see which data variables we will deal with!  Below, we will use `names()` to print the variable names in our data to have them handy.  
-
+  
 ```{r}
 names(Titanic)
 ```
-
+  
 The `names()` function we just ran displayed the 6 variables within the Titanic Data which include Gender, Age, Name, Fare, Class and Survived.   
   
 Of course, you could have looked at the actual CSV file or RData file directly. But functions like `names()` are very useful when wrangling data such as JSON and similar data types.  
@@ -90,11 +90,14 @@ As you can see from above output, the count format will give us the raw number o
 
 ### Using proportion format of `tally()`:  
 
+Another format that statisticians use is the proportion format of `tally()`.
+
+
 ```{r}
 tally(~Class, format = "proportion", data = Titanic)
 ```
 
-Another format that statisticians use is the proportion format of `tally()`.  For instance, the Lower class output implies that roughly 47.85% of Titanic passengers bought the low-class tickets.  
+According to the output above, it is implied that roughly 47.85% of Titanic passengers bought the low-class tickets.  
 
 ### Using percent format of `tally()`:  
 
@@ -106,7 +109,7 @@ tally(~Survived, format = "percent", data = Titanic)
 
 Just a quick note:  had we ran the proportion format, the output would have displayed 0.5914 for No.  
 
-The output above clearly shows that roughly 40.86% of Titanic passengers survived the infamous incident.  
+The output above clearly shows that roughly 59.14% of Titanic passengers did not survive the infamous tragedy.  
 
 
 ### Comparing Genders:
