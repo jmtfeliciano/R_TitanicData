@@ -71,9 +71,13 @@ str(Titanic)
 
 As we can see, more information are provided. For instance, the output shows that there are 2 levels for Gender, "Famale" and "Male".  But `str()` can look a bit messy.  
 
+_Note:_ We could have used `View(Titanic)` to open the spreadsheet in a difference pane or tab in RStudio.  But that will require sifting through the spreadsheet.  It's good to familiarize with both `str()` and `sapply()` functions so we don't have leave our tab.  
+
 ## Creating Basic Graphs
 
 There are so many ways to create graphs and the resources and synthax for R can be overwhelming.  So I will demonstrate a few ways to depict our data in a meaningful way.
 
-Comparing 
+### Comparing Genders:
+
+
 
