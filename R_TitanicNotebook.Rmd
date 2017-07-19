@@ -160,8 +160,15 @@ barplot(data)
 
 Look how beautiful this graph is!  Again, we converted the Class data from the Titanic into a contingency table using `table()`.  
 
-__Beautify the graph:__  
+__Beautify the graph:__  The graph is very bare.  It lacks labels, titles, and color.  Let us pass some paramaters to modify its properties.  Below, I will create a graph for Survival.  
 
+```{r}
+#obviously, we are passing data to xlab, ylab, main, color to add properties to our barplot 
+data2 <- table(Titanic$Survived)
+barplot(data2, xlab = "Did survive?", ylab = "No. of Passengers", main = "Titanic Survival Count", col = "black")  
+```
+
+__Look how much better it looks!__  It looks much better with our custom color, labels, titles.  
 
 
 
