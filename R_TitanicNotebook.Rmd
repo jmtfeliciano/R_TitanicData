@@ -130,6 +130,8 @@ The output above clearly shows that roughly 59.14% of Titanic passengers did not
 _Just a quick note:_  Had we ran the proportion format, the output would have displayed 0.5914 for No. As students and practitioner of Statistics, you need to be fluent in reading via proportions.  
 
 
+$\pagebreak$ 
+
 ## Creating Graphs and Charts of One Categorical Data:
 
 ### The function `bargraph()` 
@@ -140,7 +142,10 @@ The easiest way to create graph in R is by using the `bargraph()` function:
 bargraph(~Class, Titanic)
 ```
 
-It looks like we were able to graph a decent graph.  But the issue with this is:  `bargraph()` lacks flexibility.  So this might be good to create a simply bar graph.  But if you want to creatively label or redesign any aspect of the graph, `bargraph()` will not yield to you.  
+It looks like we were able to graph a decent graph.  But the issue with this is:  `bargraph()` lacks flexibility.  So this might be good to create a simply bar graph.  But if you want to creatively label or redesign any aspect of the graph, `bargraph()` will not yield to you.
+
+$\pagebreak$
+
 
 ### The function `barplot()`  
 
@@ -162,10 +167,16 @@ Look how beautiful this graph is!  Again, we converted the Class data from the T
 
 __Beautify the graph:__  The graph is very bare.  It lacks labels, titles, and color.  Let us pass some paramaters to modify its properties.  Below, I will create a graph for Survival.  
 
+
+$\pagebreak$
+
+
+
 ```{r}
 #obviously, we are passing data to xlab, ylab, main, color to add properties to our barplot 
 data2 <- table(Titanic$Survived)
-barplot(data2, xlab = "Did survive?", ylab = "No. of Passengers", main = "Titanic Survival Count", col = "black")  
+barplot(data2, xlab = "Did survive?", ylab = "No. of Passengers", 
+        main = "Titanic Survival Count", col = "black")  
 ```
 
 __Look how much better it looks!__  It looks much better with our custom color, labels, titles.  There's plenty more of modification we could do (such as change the border color of graphs).  But for this, check out the R-documentation page and see which parameters and default values we could change to fit our goals.  
