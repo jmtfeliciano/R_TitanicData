@@ -144,7 +144,7 @@ It looks like we were able to graph a decent graph.  But the issue with this is:
 
 ### The function `barplot()`  
 
-`barplot()` is one of the best functions to plot graphs. Unfortunately, a call like `barplot(~Class, Titanic)` will not work because `barplot()` only accepts arrays or similar formats.  
+`barplot()` is one of the best functions to plot graphs. Unfortunately, a call like `barplot(~Class, Titanic)` will not work because `barplot()` only accepts arrays, contingency tables and similar data types.   
 
 So there's an extra step required though. But here is an illustration of how to call it properly:
 
@@ -166,18 +166,20 @@ __Beautify the graph:__
 
 
 
-### Graph From Customized Data Through `barplot()`  
-
-
-
-
-
-
-
 
 *** 
 
 To be edited:
+
+
+
+
+
+
+
+
+### Graph From Customized Data Through `barplot()`  
+
 
 ```{r}
 counts <- table(Titanic$Class)
