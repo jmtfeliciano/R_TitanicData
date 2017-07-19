@@ -168,7 +168,7 @@ data2 <- table(Titanic$Survived)
 barplot(data2, xlab = "Did survive?", ylab = "No. of Passengers", main = "Titanic Survival Count", col = "black")  
 ```
 
-__Look how much better it looks!__  It looks much better with our custom color, labels, titles.  
+__Look how much better it looks!__  It looks much better with our custom color, labels, titles.  There's plenty more of modification we could do (such as change the border color of graphs).  But for this, check out the R-documentation page and see which parameters and default values we could change to fit our goals.  
 
 
 
