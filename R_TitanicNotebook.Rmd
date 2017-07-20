@@ -203,7 +203,7 @@ For complicated big data, we simply extract data and plot them.  But for simple 
 __This particular tutorial is helpful:__  Most tutorials will have you use names.arg inside the `barplot()` and other methodology/sythax that can be a nightmare.  `names()` is your friend here as I will demonstrate below.  
 
 
-Suppose we found out that the Titanic has a fatality rate of .59 and want to compare it to the fatality rate of two other ships with fatality rates of .41 and .12 respectively.  We can convert all the dependent and independent variables into their own arrays/collection.  
+Suppose we found out from the web that Titanic has a fatality rate of .59 and want to compare it to the fatality rate of two other ships with rates 0.41 and 0.12 respectively.  We can convert all the dependent and independent variables into their own arrays/collection.  
   
 
 ```{r}
@@ -211,8 +211,14 @@ fatality_rate <- c(.59,.41,.12)
 names(fatality_rate) <- c("Titanic","SomeShip_1", "SomeShip_2")
 
 
-barplot(fatality_rate, main="Fatality Rate Across Different Ships" )
+barplot(fatality_rate, main="Fatality Rate Across Different Ships",
+        ylim=c(0,1))
 ```
+
+Voila, we were able to create custom bar graphs with ease by creating a collection and by utilizing `names()`
+
+#### Important point about scaling:
+Do note that I also passed a `ylim=c(0,1)` argument inside `barplot()`.  Often, you will find that graphs of any kind can look funky with scaling really off.  In this case, we know that proportions only go between 0 and 1. So I passed a `ylim=c(0,1)` to force this y-window.  
 
 
 $\pagebreak$
