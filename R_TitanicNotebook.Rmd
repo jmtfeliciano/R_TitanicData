@@ -10,7 +10,7 @@ output:
 
 Arguably, R has the steepest learning curve for Data Scientists and Statisticians.  Once you are comfortable with it, R is very rewarding.  But learning the many ways to represent your data using R is always the main challenge. 
   
-For instance, `barplot()` is able to read data from RData seemlessly.  But it is always a challenge to learn the most proper -- and perhaps the simplest -- method to print custom data sets. So my personal struggles with R inspired this tutorials.  
+For instance, `barplot()` is able to read data from RData seemlessly.  But it is always a challenge to learn the most proper -- and perhaps the simplest -- method to print custom data sets. Plenty of the intermittent and sparse tutorials out there tend to overcomplicated their code.  So my personal struggles with R inspired this tutorials. I want to take the simplest but proper way to do tasks in R.  
 
 # There are four major parts to this tutorials:
 
@@ -189,25 +189,40 @@ __Look how much better it looks!__  It looks much better with our custom color, 
 
 
 
+
+
+
+
+$\pagebreak$
+
 ### Graph From Customized Data Through `barplot()`  
 
-For complicated big data, we will merely extract data and plot them.  But for simple small data, we could simply pass an array of values for plotting.   
-For some reason, we want to 
+
+For complicated big data, we simply extract data and plot them.  But for simple small data, we could simply pass an array of values for plotting.   
+
+__This particular tutorial is helpful:__  Most tutorials will have you use names.arg inside the `barplot()` and other methodology/sythax that can be a nightmare.  `names()` is your friend here as I will demonstrate below.  
+
+
+Suppose we found out that the Titanic has a fatality rate of .59 and want to compare it to the fatality rate of two other ships with fatality rates of .41 and .12 respectively.  We can convert all the dependent and independent variables into their own arrays/collection.  
+  
 
 ```{r}
-shipnames <- c("Titanic","Ship_1", "Ship_2")
-fatality <- c(.59,.41,.12)
-barplot(fatality, main="Fatality Across Different Ships" )
+fatality_rate <- c(.59,.41,.12)
+names(fatality_rate) <- c("Titanic","SomeShip_1", "SomeShip_2")
+
+
+barplot(fatality_rate, main="Fatality Rate Across Different Ships" )
 ```
 
 
-
+$\pagebreak$
 
 
 *** 
 
-To be edited:
+# The rest to be edited/deleted as I go:
 
+# The rest to be edited/deleted as I go:
 
 
 
