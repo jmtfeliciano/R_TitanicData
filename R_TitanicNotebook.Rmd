@@ -6,6 +6,12 @@ output:
   pdf_document: default
 ---
 
+# Motivation To This Tutorials:
+
+Arguably, R has the steepest learning curve for Data Scientists and Statisticians.  Once you are comfortable with it, R is very rewarding.  But learning the many ways to represent your data using R is always the main challenge. 
+  
+For instance, `barplot()` is able to read data from RData seemlessly.  But it is always a challenge to learn the most proper -- and perhaps the simplest -- method to print custom data sets. So my personal struggles with R inspired this tutorials.  
+
 # There are four major parts to this tutorials:
 
 1.  How to read and extract data from RData file
@@ -180,6 +186,19 @@ barplot(data2, xlab = "Did survive?", ylab = "No. of Passengers",
 ```
 
 __Look how much better it looks!__  It looks much better with our custom color, labels, titles.  There's plenty more of modification we could do (such as change the border color of graphs).  But for this, check out the R-documentation page and see which parameters and default values we could change to fit our goals.  
+
+
+
+### Graph From Customized Data Through `barplot()`  
+
+For complicated big data, we will merely extract data and plot them.  But for simple small data, we could simply pass an array of values for plotting.   
+For some reason, we want to 
+
+```{r}
+shipnames <- c("Titanic","Ship_1", "Ship_2")
+fatality <- c(.59,.41,.12)
+barplot(fatality, main="Fatality Across Different Ships" )
+```
 
 
 
