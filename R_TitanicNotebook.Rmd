@@ -62,6 +62,8 @@ Now that the data has been loaded, we probably want to see which data variables 
 names(Titanic)
 ```
   
+  
+  
 The `names()` function we just ran displayed the 6 variables within the Titanic Data which include Gender, Age, Name, Fare, Class and Survived.   
   
 Of course, you could have looked at the actual CSV file or RData file directly. But functions like `names()` are very useful when wrangling data from JSON and similar data types.  
@@ -239,7 +241,50 @@ pie(counts, main="Gender Distribution of Titanic Passengers")
 ```
 
 
-`pie()` helped us create a beautiful pie chart.  But it did not print the numbers associated with them.  There are multiple ways of doing this.  But the easiest way is to create a custom label tag like below:
+
+`pie()` helped us create a beautiful pie chart.  But I would argue that `pie()` lacks flexibility and is one of the most frustrating functions to deal with.  
+  
+__Issue:__ The pie chart was a good visual but it did not print the numbers associated with them. There's actually no easy way to do this.  Many outside resources will offer you many confusing ways of doing this.  
+  
+Custom labels have to be a "factor".  We want to create a label with both the variable name (here it is the categorical data "Female" and "Male") and their count. `paste()` is our friend here.  
+
+And to make it easier, we will convert our Gender table  Again, this is commonly known as "String" in order programming languages.  For me, the easiest way is to create a table using the `table()`. So that we could easily call it
+
+```{r}
+data <- table(Titanic$Gender)
+data_labels <- paste(names(data),data,sep=", ")
+pie(data,labels=data_labels)
+```
+
+
+
+
+$\pagebreak$
+
+
+*** 
+
+# I will add stuff here as I go:
+
+# The rest -- if any -- needs to be edited/deleted as I go:
+
+
+
+
+```{r}
+counts <-tally(~Gender,  data = Titanic)
+pie(counts, main="Gender Distribution of Titanic Passengers")
+```
+
+
+
+
+```{r}
+fatality_rate <- c(.59,.41,.12)
+names(fatality_rate) <- c("Titanic","SomeShip_1", "SomeShip_2")
+
+pie(fatality_rate)
+```
 
 
 
