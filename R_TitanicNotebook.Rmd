@@ -15,7 +15,7 @@ For instance, `barplot()` is able to read data from RData seemlessly.  But it is
 # There are four major parts to this tutorials:
 
 1.  How to read and extract data from RData file
-2.  How to create basic tally and graphs 
+2.  How to create basic tally and graphs, and customized graphs 
 3.  How to run basic descriptive statistics
 4.  How to run and read results of inferential statistics
 
@@ -217,8 +217,31 @@ barplot(fatality_rate, main="Fatality Rate Across Different Ships",
 
 Voila, we were able to create custom bar graphs with ease by creating a collection and by utilizing `names()`
 
-#### Important point about scaling:
+_Important point about scaling_:
 Do note that I also passed a `ylim=c(0,1)` argument inside `barplot()`.  Often, you will find that graphs of any kind can look funky with scaling really off.  In this case, we know that proportions only go between 0 and 1. So I passed a `ylim=c(0,1)` to force this y-window.  
+
+
+$\pagebreak$
+
+
+
+
+
+
+
+### Pie Chart Through `pie()`  
+
+Now we are done with bar graphs -- both basic and advanced -- let us go over pie charts.  `pie()` is very useful for this task.  Below is the code to print this:
+
+```{r}
+counts <-tally(~Gender,  data = Titanic)
+pie(counts, main="Gender Distribution of Titanic Passengers")
+```
+
+
+`pie()` helped us create a beautiful pie chart.  But it did not print the numbers associated with them.  There are multiple ways of doing this.  But the easiest way is to create a custom label tag like below:
+
+
 
 
 $\pagebreak$
@@ -226,34 +249,8 @@ $\pagebreak$
 
 *** 
 
-# The rest to be edited/deleted as I go:
+# I will add stuff here as I go:
 
-# The rest to be edited/deleted as I go:
-
-
-
-
-
-
-
-### Graph From Customized Data Through `barplot()`  
-
-
-```{r}
-counts <- table(Titanic$Class)
-barplot(counts)
-```
-
-```{r}
-counts <-tally(~Gender, format = "count", data = Titanic)
-pie(counts, main="Gender Distribution of Titanic Passengers")
-```
-
-
-
-
-
-
-
+# The rest -- if any -- needs to be edited/deleted as I go:
 
 
