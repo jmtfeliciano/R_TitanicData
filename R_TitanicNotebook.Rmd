@@ -244,18 +244,21 @@ pie(counts, main="Gender Distribution of Titanic Passengers")
 
 `pie()` helped us create a beautiful pie chart.  But I would argue that `pie()` lacks flexibility and is one of the most frustrating functions to deal with.  
   
-__Issue:__ The pie chart was a good visual but it did not print the numbers associated with them. There's actually no easy way to do this.  Many outside resources will offer you many confusing ways of doing this.  
+__Issue:__ The pie chart was a good visual but it did not print the numbers associated with them. There's actually no easy way to do this.  And sadly, many outside resources will offer you confusing ways of doing this without proper explanation.  Here what I am here for!
   
-Custom labels have to be a "factor".  We want to create a label with both the variable name (here it is the categorical data "Female" and "Male") and their count. `paste()` is our friend here.  
-
-And to make it easier, we will convert our Gender table  Again, this is commonly known as "String" in order programming languages.  For me, the easiest way is to create a table using the `table()`. So that we could easily call it
+__Basics:__ Custom labels have to be a "factor" -- as explained earlier, "factor" is equivalent to string in other programming languages.  So we want to create a label with both the categorical name and number count. `paste()` is our friend here since we can pass arguments that it can join together.  See the script I ran and I will explain the logic behind them.  
 
 ```{r}
-data <- table(Titanic$Gender)
-data_labels <- paste(names(data),data,sep=", ")
-pie(data,labels=data_labels)
+gender_data <- table(Titanic$Gender)
+data_labels <- paste(names(gender_data),gender_data,sep=", ")
+pie(gender_data,labels=data_labels)
 ```
 
+As expected, the pie chart finally printed both the categorical variables and their number count!  
+
+The script that I made for customization can be overwhelming. 
+  
+So here's what I did and their explanation:  First, I created a table of gender data and called it gender_data.  Next, I created a factor to act as my labels.  `paste(names(gender_data),gender_data,sep=", ")` implies that I am joining the names of my gender_data (Male or Female) and their respective count.  `sep` indicated how I wanted them to be seperated.  Here, I wanted them to be separated by an comma and a space. I then created data_labels to carry this custom label we created using `paste()`.  Finally, I created the pie chart by calling `pie(gender_data,labels=data_labels)`.  
 
 
 
