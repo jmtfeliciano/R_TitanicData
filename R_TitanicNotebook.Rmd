@@ -258,7 +258,11 @@ As expected, the pie chart finally printed both the categorical variables and th
 
 The script that I made for customization can be overwhelming. 
   
-So here's what I did and their explanation:  First, I created a table of gender data and called it gender_data.  Next, I created a factor to act as my labels.  `paste(names(gender_data),gender_data,sep=", ")` implies that I am joining the names of my gender_data (Male or Female) and their respective count.  `sep` indicated how I wanted them to be seperated.  Here, I wanted them to be separated by an comma and a space. I then created data_labels to carry this custom label we created using `paste()`.  Finally, I created the pie chart by calling `pie(gender_data,labels=data_labels)`.  
+So here's what I did and their respective explanation:  
+
+1. First, I created a table of gender data and called it gender_data. 
+2. Next, I created a factor to act as my label. Here, `paste(names(gender_data),gender_data,sep=", ")` implies that I am joining the `names` of my gender_data (which is either Male or Female) and their respective count.  `sep` -- short-hand for separator -- indicated how I wanted them to be seperated.  Here, I wanted them to be separated by an comma and a space: `sep=", "`. I passed this entire function or argument to a new variable, `data_labels`, to carry this custom label we created.  
+3. Finally, I created the pie chart by calling `pie(gender_data,labels=data_labels)`.    
 
 
 
