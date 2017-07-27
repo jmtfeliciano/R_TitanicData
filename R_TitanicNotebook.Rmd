@@ -250,7 +250,7 @@ __Basics:__ Custom labels have to be a "factor" -- as explained earlier, "factor
 
 ```{r}
 gender_data <- table(Titanic$Gender)
-data_labels <- paste(names(gender_data),gender_data,sep=", ")
+data_labels <- paste(names(gender_data),gender_data,sep=": ")
 pie(gender_data,labels=data_labels)
 ```
 
@@ -261,7 +261,7 @@ The script that I made for customization can be overwhelming.
 So here's what I did and their respective explanation:  
 
 1. First, I created a table of gender data and called it gender_data. 
-2. Next, I created a factor to act as my label. Here, `paste(names(gender_data),gender_data,sep=", ")` implies that I am joining the `names` of my gender_data (which is either Male or Female) and their respective count.  `sep` -- short-hand for separator -- indicated how I wanted them to be seperated.  Here, I wanted them to be separated by an comma and a space: `sep=", "`. I passed this entire function or argument to a new variable, `data_labels`, to carry this custom label we created.  
+2. Next, I created a factor to act as my label. Here, `paste(names(gender_data),gender_data,sep=": ")` implies that I am joining the `names` of my gender_data (which is either Male or Female) and their respective count.  `sep` -- short-hand for separator -- indicated how I wanted them to be seperated.  Here, I wanted them to be separated by a colon and a space: `sep=": "`. I passed this entire function or argument to a new variable, `data_labels`, to carry this custom label we created.  
 3. Finally, I created the pie chart by calling `pie(gender_data,labels=data_labels)`.    
 
 
