@@ -279,7 +279,13 @@ The code is similar to `tally()` we used earlier but instead, we are passing two
 tally(~Class + Survived, format = "count", data = Titanic, margins=TRUE)
 ```
 
+Like we did with one variables, we can indicate to tally to print the data in proportion format.  For this, simply pass `format = "proportion"` inside `tally()`.
 
+```{r}
+tally(~Class + Survived, format = "proportion", data = Titanic, margins=TRUE)
+```
+
+Voila, now we have a contingency table with proportions instead!
 
 
 
