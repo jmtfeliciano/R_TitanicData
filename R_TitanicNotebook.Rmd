@@ -263,10 +263,25 @@ So here's what I did and their respective explanation:
 1. First, I created a table of gender data and called it gender_data. 
 2. Next, I created a factor to act as my label. Here, `paste(names(gender_data),gender_data,sep=": ")` implies that I am joining the `names` of my gender_data (which is either Male or Female) and their respective count.  `sep` -- short-hand for separator -- indicated how I wanted them to be seperated.  Here, I wanted them to be separated by a colon and a space: `sep=": "`. I passed this entire function or argument to a new variable, `data_labels`, to carry this custom label we created.  
 3. Finally, I created the pie chart by calling `pie(gender_data,labels=data_labels)`.    
-
-
+  
+Now, we are done creating graphs with just one variable.  Now, let's focus on creating tables and graphs for two different data variables!
 
 $\pagebreak$
+
+
+
+### Creating Contingency Table for Two Variables
+
+The code is similar to `tally()` we used earlier but instead, we are passing two variables.  For this example, I want to create a contingency table between class and survival. 
+
+
+```{r}
+tally(~Class + Survived, format = "count", data = Titanic, margins=TRUE)
+```
+
+
+
+
 
 
 *** 
