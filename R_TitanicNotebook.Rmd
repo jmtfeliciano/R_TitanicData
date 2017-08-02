@@ -344,13 +344,25 @@ $\pagebreak$
 
 # Creating Mosaic Plots:
 
-Of all the plots, this is my favorite.  Mosaic plot conveys meaning in the width of the bars (normally, we the height is the only one modified).  To make sense of this, I will run the script and demonstrate mosaic plots.  
+Of all the plots, this is my favorite; and it is one of the least familiar graph type for the average folks.  Mosaic plot conveys meaning in the width of the bars -- normally, the height is the only one modified.  To make sense of this easier, I will simply run the script and demonstrate what mosaic plots look like.  
 
 ```{r}
-mosaicplot(~Class + Survived, data=Titanic, color=TRUE)
+mosaicplot(~Class + Survived, data=Titanic)
 ```
 
-Mosaic Plots are really nice to look at.  Also, they provide readers greater meaning.  Here, the width of the lower, middle and upper class tickets are differentiated.  So we are given additional context on the spread across the ticket holders.  
+Mosaic Plots are really nice to look at.  Also, they provide readers greater meaning as both the width and height are both modified and scaled.  Here, the width of the lower, middle and upper class tickets are differentiated as well.  So we are given additional context on the spread across the ticket holders.  
+
+$\pagebreak$   
+Alternatively, I could have switched the x-axis with y-axis.  Here's a side by side comparison -- do note that I am passing the parameter `color=TRUE` inside the `mosaicplot()` in order to add basic colors and for contrast:
+
+```{r}
+mosaicplot(~Survived + Class, data=Titanic, color=TRUE)
+mosaicplot(~Class + Survived, data=Titanic, color=TRUE)
+```
+ 
+  
+In either case, the mosaic plots were able to provide us extra information on the relationship between Survival and Class with context on their scales.  Try to utilize it in your future projects!  
+
 
 
 *** 
