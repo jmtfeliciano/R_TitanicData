@@ -365,6 +365,24 @@ In either case, the mosaic plots were able to provide us extra information on th
 
 
 
+$\pagebreak$
+
+
+
+# Dodged bars for two categorical data:
+
+Dodged bars are often used in comparing categorical data.   It is another effective way to contrast patterns.  The following script will contrast the distrubution of survival across ticket class.  
+
+
+```{r}
+bargraph(~Class, groups=Survived, auto.key=TRUE, data=Titanic)
+```
+
+
+
+
+
+
 *** 
 
 # I will add stuff here as I go:
