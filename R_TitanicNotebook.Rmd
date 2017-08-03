@@ -376,9 +376,13 @@ Dodged bars are often used in comparing categorical data.   It is another effect
 
 ```{r}
 bargraph(~Class, groups=Survived, auto.key=TRUE, data=Titanic)
+
 ```
 
+  
+_ Note: _ For `bargraph()`, I included something foreign:  `auto.key=TRUE`.  While `bargraph()` without this parameter will work, it will not label the sub-categories in each x-axis category.  
 
+_ Advice: _ Try running the script in your local environment without the `auto.key=TRUE` to see the small but important change.  
 
 
 
