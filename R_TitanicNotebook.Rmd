@@ -10,7 +10,9 @@ output:
 
 Arguably, R has the steepest learning curve for Data Scientists and Statisticians.  Once you are comfortable with it, R is very rewarding.  But learning the many ways to represent your data using R is always the main challenge. 
   
-For instance, `barplot()` is able to read data from RData seemlessly.  But it is always a challenge to learn the most proper -- and perhaps the simplest -- method to print custom data sets. Plenty of the intermittent and sparse tutorials out there tend to overcomplicate their code.  So my personal struggles with R inspired this tutorials. In short, I already performed the coquettish struggle between simplicity and properness to do tasks in R.  
+For instance, `barplot()` is able to read data from RData seemlessly.  But it is always a challenge to learn the most proper -- and perhaps the simplest -- method to print custom data sets. 
+
+Plenty of the intermittent and sparse tutorials out there tend to overcomplicate their code.  So my personal struggles with R inspired this tutorials. In short, I already performed the coquettish struggle between simplicity and properness to perform tasks in R.  
 
 # There are four major parts to this tutorials:
 
