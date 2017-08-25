@@ -385,7 +385,7 @@ __Note:__ For `bargraph()`, I included what may seem foreign to you:  `auto.key=
 
 __Advice:__ Try running the script in your local environment without the `auto.key=TRUE` to see the small but important change made by the said parameter.
 
-__Note 2:__ `bargraph()` lacks flexibility specially in the graphics arena.  For example, colors cannot be modified unless done through a drastic and terribly unnecessary code.  For 'full' flexibility, `ggplot()` through ggplot2 is preferred -- which is frankly another tutorial on itself.  The goal here is to familiarize yourself what dodged bars looked like.  
+__Note 2:__ `bargraph()` lacks flexibility specially in the graphics arena.  For example, colors cannot be modified unless done through a drastic and terribly unnecessary code.  For 'full' flexibility, `ggplot()` through ggplot2 is preferred -- which is frankly another tutorial on itself.  The main goal here is to familiarize yourself what dodged bars looked like.  
 
 
 
