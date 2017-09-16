@@ -392,6 +392,15 @@ $\pagebreak$
 # R-Tutorials Using Titanic Data  
 ## Part 3:  Descriptive Statistics through R
 
+This is where real Statistics begin.  In statistics, we tend to focus about central tendencies in the beginning.  So the module will discuss Mean, Median and Mode.  
+
+
+//experimenting
+
+```{r}
+counts <- tally(~Age, format="count", data=Titanic)
+sort(counts)
+```
 
 
 
