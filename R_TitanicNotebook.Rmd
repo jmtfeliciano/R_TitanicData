@@ -394,6 +394,18 @@ $\pagebreak$
 
 This is where real Statistics begin.  In statistics, we tend to focus on central tendencies of variables and data set.  So the module will discuss Mean, Median and Mode, and how to extract these information using R.  
 
+# Mean as the central tendency
+
+Mean is the one we are most familiar.  Most common folks refer to mean when they mention 'average'.  
+
+Suppose we are interested in the mean age of titanic passengers.  In this case, we simply need to call `mean()`.
+
+```{r}
+mean(~Age, data=Titanic)
+```
+
+By using `mean()`, we found out that the mean age of Titanic passenger is roughly 30 years old.  
+
 
 //experimenting
 
