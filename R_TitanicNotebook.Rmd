@@ -289,58 +289,6 @@ tally(~Class + Survived, format = "proportion", data = Titanic, margins=TRUE)
 
 Voila, now we have a contingency table with proportions instead!
 
-
-$\pagebreak$
-
-
-### Creating Mosaic Plots:
-
-Of all the plots, this is my favorite.  Mosaic plot conveys meaning in the width of the bars (normally, we the height is the only one modified).  To make sense of this, I will run the script and demonstrate mosaic plots.  
-
-```{r}
-mosaicplot(~Class + Survived, data=Titanic, color=TRUE)
-```
-
-Mosaic Plots are really nice to look at.  Also, they provide readers greater meaning.  Here, the width of the lower, middle and upper class tickets are differentiated.  So we are given additional context on the spread across the ticket holders.  
-
-
-
-
-
-
-
-
-
-
-
-
-*** 
-
-# I will add stuff here as I go:
-
-# The rest -- if any -- needs to be edited/deleted as I go:
-
-
-
-
-```{r}
-counts <-tally(~Gender,  data = Titanic)
-pie(counts, main="Gender Distribution of Titanic Passengers")
-```
-
-
-
-
-```{r}
-fatality_rate <- c(.59,.41,.12)
-names(fatality_rate) <- c("Titanic","SomeShip_1", "SomeShip_2")
-
-pie(fatality_rate)
-```
-
-
-
-
 $\pagebreak$
 
 
