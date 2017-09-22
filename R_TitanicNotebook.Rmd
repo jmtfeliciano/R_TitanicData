@@ -354,6 +354,11 @@ mean(~Age, data=Titanic)
 
 By using `mean()`, we found out that the mean age of Titanic passenger is roughly 30 years old.  
 
+# Median as the central tendency
+
+
+
+
 
 //experimenting
 
