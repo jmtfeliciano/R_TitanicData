@@ -356,7 +356,15 @@ By using `mean()`, we found out that the mean age of Titanic passenger is roughl
 
 # Median as the central tendency
 
-Median is a very useful metric.  It is not easily affected by outlier data points.  Many economists for instance tend to use median when discussing 'average' home prices.  
+Median is a very useful metric.  It is not easily affected by outlier data points.  For instance, many economists actually refer to the median home price when discussing 'average' home prices.  
+
+
+
+```{r}
+median(~Age, data=Titanic)
+```
+
+In our Titanic Data, the `median()` function tells us that 28 years old is the median passenger age for the Titanic.  
 
 
 
