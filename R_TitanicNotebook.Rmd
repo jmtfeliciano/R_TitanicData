@@ -352,7 +352,7 @@ Suppose we are interested in the mean age of titanic passengers.  In this case, 
 mean(~Age, data=Titanic)
 ```
 
-By using `mean()`, we found out that the mean age of Titanic passenger is roughly 30 years old.  
+By using `mean()`, we found out that the mean age of Titanic passengers is roughly 30 years old.  While `mean()` might be a good measure of central tendency, it can be sensitive to large outliers specially when the sample size is small.  So `median()` is another measure of central tendency we will use.
 
 # Median as the central tendency
 
