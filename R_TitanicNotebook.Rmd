@@ -5,6 +5,9 @@ date: "7/10/2017"
 output:
   pdf_document: default
 ---
+```{r}
+-4 %% 2
+```
 
 # Motivation To This Tutorials:
 
@@ -367,8 +370,9 @@ median(~Age, data=Titanic)
 
 In our Titanic Data, the `median()` function tells us that 28 years old is the median passenger age for the Titanic.  
 
+# Mode as the central tendency
 
-
+Mode is perhaps the least used among the three central tendencies discussed in this tutorial.  By definition, it is a metric to describe the most occuring results in a variable.  It is not commonly used that there's not a built in R function to handle Mode. For this, we would need to create a function from scratch:  
 
 
 //experimenting
