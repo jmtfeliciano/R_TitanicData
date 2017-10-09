@@ -369,11 +369,22 @@ In our Titanic Data, the `median()` function tells us that 28 years old is the m
 
 # Mode as the central tendency
 
-Mode is perhaps the least metric used among the three central tendencies discussed in this tutorial.  By definition, it is a metric to describe the most occuring results in a variable.  It is not commonly used that there's not a built in R function to handle Mode. For this, we would need to create a function from scratch:  
+Mode is perhaps the least metric used among the three central tendencies discussed in this tutorial.  By definition, it is a metric to describe the most occuring results in a variable.  It is not commonly used that there's not a built in R function to handle Mode.
+
+_Advanced:_  As stated, there are no built-in R function for mode.  For this, we would need to create a function from scratch.    
 
 ```{r}
+getmode <- function(v) {
+   uniqv <- unique(v)
+   uniqv[which.max(tabulate(match(v, uniqv)))]
+}
 
+result <- getmode(Titanic$Age)
+print(result)
 ```
+
+TO DO: ADD COMMENTS IN THE CODE
+
 
 
 
