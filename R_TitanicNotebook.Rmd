@@ -367,21 +367,30 @@ median(~Age, data=Titanic)
 
 In our Titanic Data, the `median()` function tells us that 28 years old is the median passenger age for the Titanic.  
 
+$\pagebreak$
+
 # Mode as the central tendency
 
-Mode is perhaps the least metric used among the three central tendencies discussed in this tutorial.  By definition, it is a metric to describe the most occuring results in a variable.  It is not commonly used that there's not a built in R function to handle Mode.
+Mode is perhaps the least used among the three central tendencies discussed in this tutorial.  By definition, it is a metric to describe the most occuring results in a variable.  It is not commonly used that there's not a built-in R function to handle Mode.
 
 _Advanced:_  As stated, there are no built-in R function for mode.  For this, we would need to create a function from scratch.    
 
-```{r}
-getmode <- function(v) {
-   uniqv <- unique(v)
-   uniqv[which.max(tabulate(match(v, uniqv)))]
-}
+The very first step is to create a table from the titanic data using `table()` method:
 
-result <- getmode(Titanic$Age)
-print(result)
+```{r}
+pairedData <- table(Titanic$Age)
+pairedData
 ```
+
+The table above implies that there are 3 infants (younger than 1), 19 children around the age of 1, etc.  
+
+
+
+$\pagebreak$
+
+
+
+
 
 TO DO: ADD COMMENTS IN THE CODE
 
@@ -391,8 +400,10 @@ TO DO: ADD COMMENTS IN THE CODE
 //experimenting
 
 ```{r}
-counts <- tally(~Age, format="count", data=Titanic)
-sort(counts)
+#result <- getmode(Titanic$Age)
+#names(sort(-table(result)))[1]
+
+sort(table(Titanic$Age))[length(table(Titanic$Age))]
 ```
 
 
