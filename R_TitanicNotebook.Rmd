@@ -378,11 +378,12 @@ _Advanced:_  As stated, there are no built-in R function for mode.  For this, we
 The very first step is to create a table from the titanic data using `table()` method:
 
 ```{r}
-pairedData <- table(Titanic$Age)
-pairedData
+table(Titanic$Age)
 ```
 
-The table above implies that there are 3 infants (younger than 1), 19 children around the age of 1, etc.  
+Interpretation:  The table above implies that there are 3 infants younger than 1, 19 children around the age of 1, etc.  
+
+
 
 
 
