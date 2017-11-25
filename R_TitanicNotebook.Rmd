@@ -381,9 +381,9 @@ The very first step is to create a table from the titanic data using `table()` m
 table(Titanic$Age)
 ```
 
-Reading and tnterpreting table data:  The table above implies that there are 3 infants younger than 1, 19 children around the age of 1, etc.  
+Reading and interpreting table data:  The table above implies that there are 3 infants younger than 1, 19 children around the age of 1, etc.  
 
-
+Now, let's utilize the `sort()` function.  `sort()` will accept table as a parameter, then sort it by ascending order.
 
 $\pagebreak$
 
