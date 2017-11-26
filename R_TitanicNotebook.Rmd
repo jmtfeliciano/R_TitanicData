@@ -389,7 +389,7 @@ Now, let's utilize the `sort()` function. `sort()` will accept table as a parame
 sort(table(Titanic$Age))
 ```
 
-After running the script, indeed, `sort()` was able to sort our data in ascending order.  But let's extract the very last values since the values are the ones were are interested in.
+After running the script, indeed, `sort()` was able to sort our data in ascending order.  But let's extract the very last value since the value -- not the table -- is the data we are interested in.
 
 $\pagebreak$
 
