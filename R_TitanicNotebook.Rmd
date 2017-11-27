@@ -393,10 +393,12 @@ After running the script, indeed, `sort()` was able to sort our data in ascendin
 
 For this task, we need to indicate the index number we are interested in.  Assume we have a table of length 10 called fakeData, `sort(fakeData)[1]` would call the very first item with the least occurence.  And the `sort(fakeData)[10]` would call the very last data with the most occurence, which is the definition of mode.
 
-Now, let's go back to our Titanic Data.  We don't know the length of our data.  But we can simply use `length(table(Titanic$Age))` and pass that inside the bracket.
+Now, let's go back to our Titanic Data.  We don't know the length of our data.  But we can simply use `length(table(Titanic$Age))` and pass that inside the bracket:
 
-
+```{r}
 sort(table(Titanic$Age))[length(table(Titanic$Age))]
+```
+
 
 
 $\pagebreak$
