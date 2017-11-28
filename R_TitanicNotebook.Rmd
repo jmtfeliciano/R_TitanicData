@@ -373,7 +373,7 @@ $\pagebreak$
 
 Mode is perhaps the least used among the three central tendencies discussed in this tutorial.  By definition, it is a metric to describe the most occuring results in a variable.  It is not commonly used that there's not a built-in R function to handle Mode.
 
-_Advanced:_  As stated, there are no built-in R function for mode.  For this, we would need to create a function from scratch.    
+__Advanced:__  As stated, there are no built-in R function for mode.  For this, we would need to create a function from scratch.    
 
 The very first step is to create a table from the titanic data using `table()` method:
 
@@ -398,6 +398,9 @@ Now, let's go back to our Titanic Data.  We don't know the length of our data.  
 ```{r}
 sort(table(Titanic$Age))[length(table(Titanic$Age))]
 ```
+
+The script returns `24 49` which implies: the mode is 24 years old with a number count of 49. So our script works! __Note, the custom script only works for data sets with one mode__  If you have multiple modes, the script will only return one.  Iterative loops would be the easiest way to do this but it is outside the scope of this tutorials because functional programming is not the goal of this statistic tutorials.  
+
 
 
 
