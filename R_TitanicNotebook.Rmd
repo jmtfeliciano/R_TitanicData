@@ -402,14 +402,27 @@ sort(table(Titanic$Age))[length(table(Titanic$Age))]
 The script returns `24 49` which implies: the mode is 24 years old with a number count of 49. So our script works! __Note, the custom script only works for data sets with one mode__  If you have multiple modes, the script will only return one.  Iterative loops would be the easiest way to do this but it is outside the scope of this tutorials because functional programming is not the goal of this statistic tutorials.  
 
 
-
-
-
-
 $\pagebreak$
 
 
+# Range
 
+PUT DESCRIPTION HERE
+
+```{r}
+range(~Fare, data=Titanic)
+```
+
+# IQR
+
+PUT DESCRIPTION HERE
+
+```{r}
+IQR(~Fare, data=Titanic)
+```
+
+
+$\pagebreak$
 
 
 TO DO: ADD COMMENTS IN THE CODE
