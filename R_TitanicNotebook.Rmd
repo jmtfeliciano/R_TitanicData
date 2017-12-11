@@ -407,11 +407,16 @@ $\pagebreak$
 
 # Range
 
-PUT DESCRIPTION HERE
+By definition, range is the difference between the smallest and largest value.  To find the smallest and largest values, we can use `range()`:
 
 ```{r}
 range(~Fare, data=Titanic)
 ```
+
+As demonstrated, `range()` returns a vector with two values: the lowest and the highest.  We can manually compute the actual range using this values. 
+
+// TO DO:  ADD [0] [1] notation here for range to actually substract
+
 
 # IQR
 
