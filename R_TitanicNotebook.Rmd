@@ -413,9 +413,14 @@ By definition, range is the difference between the smallest and largest value.  
 range(~Fare, data=Titanic)
 ```
 
-As demonstrated, `range()` returns a vector with two values: the lowest and the highest.  We can manually compute the actual range using this values. 
+As demonstrated, `range()` returns a vector with two values: the lowest and the highest.  We can manually compute the actual range using this values by substracting these two.  
 
-// TO DO:  ADD [0] [1] notation here for range to actually substract
+Alternative, since `range()` returns a vector, we can do the following:
+
+
+```{r}
+range(~Fare, data=Titanic)[2]-range(~Fare, data=Titanic)[1]
+```
 
 
 # IQR
