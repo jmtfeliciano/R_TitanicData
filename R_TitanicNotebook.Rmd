@@ -419,7 +419,7 @@ Alternative, since `range()` returns a vector, we can do the following:
 
 
 ```{r}
-range(~Fare, data=Titanic)[2]-range(~Fare, data=Titanic)[1]
+range(~Fare, data=Titanic)[2] - range(~Fare, data=Titanic)[1]
 ```
 
 
