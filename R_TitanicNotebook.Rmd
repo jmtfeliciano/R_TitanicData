@@ -422,6 +422,7 @@ Alternative, since `range()` returns a vector, we can do the following:
 range(~Fare, data=Titanic)[2] - range(~Fare, data=Titanic)[1]
 ```
 
+As seen above, we were able to retrieve the actual range by substracting the lowest value at index 1 from the highest value at index 2.
 
 # IQR
 
