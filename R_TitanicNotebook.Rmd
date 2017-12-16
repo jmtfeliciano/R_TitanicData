@@ -426,7 +426,7 @@ As seen above, we were able to retrieve the actual range by substracting the low
 
 # IQR
 
-PUT DESCRIPTION HERE
+IRQ, shorthand for interquartile range, is another measure of variability we often see in Statistics.  We can describe IQR as a measure of where the bulk of the values lie by substracting the first quartile value from the third quartile value. 
 
 ```{r}
 IQR(~Fare, data=Titanic)
