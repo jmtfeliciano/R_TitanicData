@@ -8,7 +8,8 @@
 
 
 Note:  
-This folder contains a PDF file called`R_TitanicNotebook.pdf`.  
+The PDF will show you all the code in the RMD File but with all output from the inline R code.  Viewing the Rmd file directly from Github will not show you the output.  
 
-
-The PDF will show you all the code in the RMD File but with all output from the inline R code.  Viewing the Rmd file from Github will not show you the output.  So it is imperative that you view the PDF in Github.  Or if you want to see the output and play with them, please download and see RStudio.
+To View this Tutorial Properly:
+1.  _View this file:_ called`R_TitanicNotebook.pdf`.  OR
+2.  Install RStudio to view and interact with RMD file and the scripts I have created.
