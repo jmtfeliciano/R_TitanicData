@@ -367,6 +367,8 @@ median(~Age, data=Titanic)
 
 In our Titanic Data, the `median()` function tells us that 28 years old is the median passenger age for the Titanic.  
 
+__Note:__ Although not discussed and relevant to the dataset here, one feature of median you should know or remember is that the median, as a measure of central tendency, is resistant to outliers.    
+
 $\pagebreak$
 
 # Mode as the central tendency
@@ -426,11 +428,14 @@ As seen above, we were able to retrieve the actual range by substracting the low
 
 # IQR
 
-IRQ, shorthand for interquartile range, is another measure of variability we often see in Statistics. The inter-quartile range is a measure that indicates the extent to which the central 50% of values within the dataset are dispersed. We can describe IQR as a measure of where the bulk of the values lie by substracting the first quartile value from the third quartile value. 
+IRQ, shorthand for interquartile range, is another measure of variability we see in Statistics. The inter-quartile range is a measure that indicates the extent to which the central 50% of values within the dataset are dispersed. In short, we can describe IQR as a measure of where the bulk of the values lie by substracting the first quartile value from the third quartile value. 
 
 ```{r}
 IQR(~Fare, data=Titanic)
 ```
+
+By running `IQR()` above, we were able to calculate that the IQR for the ticket fare is exactly 27.45.  
+
 
 $\pagebreak$
 
