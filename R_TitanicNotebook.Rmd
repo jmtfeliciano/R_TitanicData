@@ -8,7 +8,7 @@ output:
 
 # Motivation To This Tutorials:
 
-Arguably, R has the steepest learning curve for Data Scientists and Statisticians.  Once you are comfortable with it, R is very rewarding for Data Analysis.  But learning the many ways to represent your data using R is always the main challenge for beginners.  
+Arguably, R has the steepest learning curve for Data Scientists and Statisticians.  Once you are comfortable with it, however, R is a very rewarding tool for Data Analysis.  Learning the many ways to represent and manipulate your data in R is always the main challenge for beginners; this is specially true to those with minimal programming background.  
   
 For instance, `barplot()` is able to read data from RData seemlessly.  But it is always a challenge to learn the most proper -- and perhaps the simplest -- method to print custom data sets. 
 
