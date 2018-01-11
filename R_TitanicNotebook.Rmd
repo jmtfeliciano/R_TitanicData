@@ -436,6 +436,17 @@ IQR(~Fare, data=Titanic)
 
 By running `IQR()` above, we were able to calculate that the IQR for the ticket fare is exactly 27.45.  
 
+$\pagebreak$
+
+# Variance
+
+Work on this
+
+# Standard Deviation
+
+Work on this
+
+
 
 $\pagebreak$
 
@@ -452,6 +463,9 @@ TO DO: ADD COMMENTS IN THE CODE
 #names(sort(-table(result)))[1]
 
 sort(table(Titanic$Age))[length(table(Titanic$Age))]
+```
+```{r}
+favstats(~Age, data=Titanic)
 ```
 
 
