@@ -440,11 +440,15 @@ $\pagebreak$
 
 # Variance
 
-Work on this
+Variance is the expectation of the squared deviation of a random variable from its mean.
+
+to do:  add symbol, more def, latex mathematical def
 
 # Standard Deviation
 
-Work on this
+Standard deviation is a measure of the dispersion of a set of data from its mean
+
+to do:  add symbol, more def, latex mathematical def
 
 
 
