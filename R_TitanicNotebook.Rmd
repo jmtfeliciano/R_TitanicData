@@ -442,7 +442,14 @@ $\pagebreak$
 
 Variance is the expectation of the squared deviation of a random variable from its mean.
 
-to do:  add symbol, more def, latex mathematical def
+The formula for variance is:  
+
+$\sigma^2 = \frac{\displaystyle\sum_{i=1}^{n}(x_i - \mu)^2}{n}$
+
+where 
+
+ADD VARIABLES NAMES AND WHAT THEY STAND FOR HERE
+
 
 # Standard Deviation
 
