@@ -451,12 +451,21 @@ where
 ADD VARIABLES NAMES AND WHAT THEY STAND FOR HERE
 
 
+example script
+```{r}
+var(Titanic$Fare)
+```
+
+
 # Standard Deviation
 
 Standard deviation is a measure of the dispersion of a set of data from its mean
 
 to do:  add symbol, more def, latex mathematical def
 
+```{r}
+sd(Titanic$Fare)
+```
 
 
 $\pagebreak$
